@@ -4,7 +4,7 @@ import streamlit as st
 import folium
 import sqlite3
 from streamlit_folium import folium_static
-from st_chat_message import message
+#from st_chat_message import message
 
 path = os.path.dirname('__file__')
 use = 'use'
@@ -142,10 +142,7 @@ with col1:
 with col2:
     with st.container():
         st.markdown("""<br><br>""", unsafe_allow_html=True)
-        message(openapi(restaurant_name, cafe_name, attraction_name))
-        message(openapi_restaurant(restaurant_name))
-        message(openapi_attraction(attraction_name))
-        message(openapi_cafe(cafe_name))
+        st.write('hi')
 
 
     
