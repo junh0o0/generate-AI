@@ -2,7 +2,6 @@ folium==0.16.0
 googlemaps==4.10.0
 openai==1.30.5
 polyline==2.0.2
-st_chat_message==0.3.8
 streamlit_extras==0.4.3
 streamlit_folium==0.20.0
 streamlit_on_Hover_tabs==1.0.1
