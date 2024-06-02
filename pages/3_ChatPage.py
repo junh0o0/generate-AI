@@ -23,6 +23,88 @@ st.markdown("""
 }
 </style>
 """, unsafe_allow_html=True)
+css = """
+<style>
+    [data-testid="stForm"]:nth-child(2) {
+        background: LightBlue;
+        position: relative;
+        animation: slideIn 0.5s ease-out;
+    }
+    
+    @keyframes slideIn {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(0%);
+        }
+    }
+</style>
+"""
+css2 = """
+<style>
+    [data-testid="stForm"]:nth-child(3) {
+        background: LightBlue;
+        position: relative;
+        animation: slideIn 0.5s ease-out;
+    }
+    
+    @keyframes slideIn {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(0%);
+        }
+    }
+</style>
+"""
+css3 = """
+<style>
+    [data-testid="stForm"]:nth-child(4) {
+        background: LightBlue;
+        position: relative;
+        animation: slideIn 0.5s ease-out;
+    }
+    
+    @keyframes slideIn {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(0%);
+        }
+    }
+</style>
+"""
+css4 = """
+<style>
+    [data-testid="stForm"]:nth-child(5) {
+        background: LightBlue;
+        position: relative;
+        animation: slideIn 0.5s ease-out;
+    }
+    
+    @keyframes slideIn {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(0%);
+        }
+    }
+</style>
+"""
+st.markdown("""
+<style>
+[data-testid="stFormSubmitButton"] {display: none;}
+</style>
+""", unsafe_allow_html=True)
+st.markdown(css, unsafe_allow_html=True)
+st.markdown(css2, unsafe_allow_html=True)
+st.markdown(css3, unsafe_allow_html=True)
+st.markdown(css4, unsafe_allow_html=True)
+
 
 def getRestaurant():
     conn = sqlite3.connect('./use/location.db')
@@ -141,10 +223,19 @@ with col1:
 with col2:
     with st.container():
         st.markdown("""<br><br><br><br><br><br><br>""", unsafe_allow_html=True)
-        st.write(openapi(restaurant_name, cafe_name, attraction_name))
-        st.write(openapi_restaurant(restaurant_name))
-        st.write(openapi_attraction(attraction_name))
-        st.write(openapi_cafe(cafe_name))
+        
+        with st.form('my_form'):
+            st.write('🤖:'+openapi(restaurant_name, cafe_name, attraction_name))
+            submitted = st.form_submit_button("Submit")
+        with st.form('2'):         
+            st.write('🍽:'+openapi_restaurant(restaurant_name))
+            submitted = st.form_submit_button("Submit") 
+        with st.form('3'):    
+            st.write('🎡:'+ openapi_attraction(attraction_name))
+            submitted = st.form_submit_button("Submit") 
+        with st.form('4'):
+            st.write('☕:'+ openapi_cafe(cafe_name))
+            submitted = st.form_submit_button("Submit") 
 
 
     
