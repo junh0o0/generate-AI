@@ -156,77 +156,76 @@ def updateCafeScore(cafeSlider0, cafeSlider1, cafeSlider2, restaurantSlider0, re
 col1, col2, col3 = st.columns(3) #st.set_page_config(layout="wide")를 사용해서 왼쪽 정렬을 가운데 정렬로 바꿈
     
 with col1:
-    with st.form(key='my_form1'):
-        st.subheader(" Questions about the cafe ☕ ")
-        cafeSlider0 = st.slider(
-            label="Do you value the taste of coffee❓", 
-            min_value=1,        
-            max_value=10,            
-            value=6               
-        )
-        cafeSlider1 = st.slider(
-            label=" Do you value the taste of dessert❓", 
-            min_value=1,        
-            max_value=10,            
-            value=6                    
-        )
-        cafeSlider2 = st.slider(
-            label="How about a unique cafe❓",  
-            min_value=1,        
-            max_value=10,            
-            value=6                 
-        )
-        st.markdown("""* * *""")
-        submitted = st.form_submit_button("Submit")
+
+    st.subheader(" Questions about the cafe ☕ ")
+    cafeSlider0 = st.slider(
+        label="Do you value the taste of coffee❓", 
+        min_value=1,        
+        max_value=10,            
+        value=6               
+    )
+    cafeSlider1 = st.slider(
+        label=" Do you value the taste of dessert❓", 
+        min_value=1,        
+        max_value=10,            
+        value=6                    
+    )
+    cafeSlider2 = st.slider(
+        label="How about a unique cafe❓",  
+        min_value=1,        
+        max_value=10,            
+        value=6                 
+    )
+    st.markdown("""* * *""")
+    
         #if submitted:
             #st.write("slider", slider_val, "checkbox", checkbox_val)
 
 with col2:    
-    with st.form(key='my_form2'):
-        st.subheader('Questions about the restaurant 🍔')
-        restaurantSlider0 = st.slider(
-            label="Do you think taste is important❓", 
-            min_value=1,        
-            max_value=10,            
-            value=6         
-        )
-        restaurantSlider1 = st.slider(
-            label=" Do you think it's important to be kind❓", 
-            min_value=1,        
-            max_value=10,            
-            value=6               
-        )
-        restaurantSlider2 = st.slider(
-            label="Do you value cost-effectiveness❓",  
-            min_value=1,        
-            max_value=10,            
-            value=6                   
-        )
-        st.markdown("""* * *""")
-        submitted = st.form_submit_button("Submit")
+    
+    st.subheader('Questions about the restaurant 🍔')
+    restaurantSlider0 = st.slider(
+        label="Do you think taste is important❓", 
+        min_value=1,        
+        max_value=10,            
+        value=6         
+    )
+    restaurantSlider1 = st.slider(
+        label=" Do you think it's important to be kind❓", 
+        min_value=1,        
+        max_value=10,            
+        value=6               
+    )
+    restaurantSlider2 = st.slider(
+        label="Do you value cost-effectiveness❓",  
+        min_value=1,        
+        max_value=10,            
+        value=6                   
+    )
+    st.markdown("""* * *""")
+        
 with col3:
-    with st.form(key='my_form3'):
-        st.subheader('Questions about the attraction 🎡')
-        attractionSlider0 = st.slider(
-            label="Do you do Instagram❓", 
-            min_value=1,        
-            max_value=10,            
-            value=6             
-        )
-        attractionSlider1 = st.slider(
-            label="Do you want to have a lot of experience❓", 
-            min_value=1,        
-            max_value=10,            
-            value=6              
-        )
-        attractionSlider2 = st.slider(
-            label="How about there's a lot to see❓",  
-            min_value=1,        
-            max_value=10,            
-            value=6                
-        )
-        st.markdown("""* * *""")
-        submitted = st.form_submit_button("Submit")
+    
+    st.subheader('Questions about the attraction 🎡')
+    attractionSlider0 = st.slider(
+        label="Do you do Instagram❓", 
+        min_value=1,        
+        max_value=10,            
+        value=6             
+    )
+    attractionSlider1 = st.slider(
+        label="Do you want to have a lot of experience❓", 
+        min_value=1,        
+        max_value=10,            
+        value=6              
+    )
+    attractionSlider2 = st.slider(
+        label="How about there's a lot to see❓",  
+        min_value=1,        
+        max_value=10,            
+        value=6                
+    )
+    st.markdown("""* * *""")
     
 
         
