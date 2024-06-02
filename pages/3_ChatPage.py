@@ -4,7 +4,6 @@ import streamlit as st
 import folium
 import sqlite3
 from streamlit_folium import folium_static
-#from st_chat_message import message
 
 path = os.path.dirname('__file__')
 use = 'use'
@@ -141,8 +140,11 @@ with col1:
 #생성형 AI 정보 제공
 with col2:
     with st.container():
-        st.markdown("""<br><br>""", unsafe_allow_html=True)
-        st.write('hi')
+        st.markdown("""<br><br><br><br><br><br><br>""", unsafe_allow_html=True)
+        st.write(openapi(restaurant_name, cafe_name, attraction_name))
+        st.write(openapi_restaurant(restaurant_name))
+        st.write(openapi_attraction(attraction_name))
+        st.write(openapi_cafe(cafe_name))
 
 
     
